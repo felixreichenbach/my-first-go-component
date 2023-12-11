@@ -1,24 +1,18 @@
-# My-First-Go-Component
+# My First Viam Component Using Go
 
-This is a basic example / starter kit to learn about how to build and integrate custom Viam components, using the Viam sensor API. This setup can easily be extended for other component API types listed in the Viam documentation here: [Viam Component APIs](https://docs.viam.com/build/program/apis/#component-apis).
+This is a basic example / starter kit template helping you to learn and get started easily with integrating your particular hardware into the Viam ecosystem. This starter kit uses a sensor component to keep it simple but can also easily be used as foundation for any other component. All you have to do is to replace the sensor specific "Readings" method with the methods required by the component you intend to integrate. 
 
+You can find further component APIs in the Viam documentation here: [Viam Component APIs](https://docs.viam.com/build/program/apis/#component-apis).
 
-## Useful Go Setup and Build Commands
-
-Some commonly used commands. Maybe helpful maybe not :-)
-
-```go mod init mysensor```
-
-```go mod tidy```
-
+## Build the Module
 
 From within the "src" directory run:
 
 ```go build -o ../bin/mysensor .```
 
-## Add a Local Module
+## Add the Module (local deploy)
 
-Configure a local module through the web interface or add the following to the RAW JSON.
+We are are going to keep it very simple and deploy Configure a local and will look into using the Viam Registry in in a later part. Deploying local module is straight forward through the web user interface directly or by adding directly to the RAW JSON configuration.
 
 ```
 {
@@ -28,11 +22,9 @@ Configure a local module through the web interface or add the following to the R
 }
 ```
 
-
-
 ## Configure Component
 
-Add this configuration to the smart machine "components" part either in RAW JSON mode or through the UI and "local component".
+Add this configuration to the smart machine "components" part either in RAW JSON mode or through the we user interface by choosing "local component" in the menu.
 
 ```
     {
@@ -46,3 +38,8 @@ Add this configuration to the smart machine "components" part either in RAW JSON
       "depends_on": []
     }
 ```
+
+## Test the Component
+
+The easiest way to test if the component was successfuly started, navigate to the "Control" tab, expand the Sensor section and hit the "Get Readings" button. If it doesn't appear, go and check the "Logs" tab where you will likely find good indication about what went wrong.
+
