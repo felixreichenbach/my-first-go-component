@@ -11,7 +11,10 @@ Some commonly used commands. Maybe helpful maybe not :-)
 
 ```go mod tidy```
 
-```go build -o ./build/mysensor ./src```
+
+From within the "src" directory run:
+
+```go build -o ../build/mysensor .```
 
 ## Add a Local Module
 
