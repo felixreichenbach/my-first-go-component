@@ -8,6 +8,7 @@ import (
 	"go.viam.com/rdk/module"
 	"go.viam.com/utils"
 
+	// Package name from "module path"/subfolder of the package
 	mysensor "viam-soleng/my-first-component/sensors"
 )
 

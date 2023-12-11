@@ -14,7 +14,7 @@ Some commonly used commands. Maybe helpful maybe not :-)
 
 From within the "src" directory run:
 
-```go build -o ../build/mysensor .```
+```go build -o ../bin/mysensor .```
 
 ## Add a Local Module
 
@@ -35,14 +35,14 @@ Configure a local module through the web interface or add the following to the R
 Add this configuration to the smart machine "components" part either in RAW JSON mode or through the UI and "local component".
 
 ```
-{
-  "name": "gosensor",
-  "model": "viam-soleng:sensor:mysensor",
-  "type": "sensor",
-  "namespace": "rdk",
-  "attributes": {
-    "setting": 3
-  },
-  "depends_on": []
-}
+    {
+      "name": "mysensor",
+      "model": "viam-soleng:go-resources:gosensor",
+      "type": "sensor",
+      "namespace": "rdk",
+      "attributes": {
+        "setting": 2
+      },
+      "depends_on": []
+    }
 ```
