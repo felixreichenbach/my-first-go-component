@@ -41,7 +41,6 @@ Add this configuration to the smart machine "components" part either in RAW JSON
 
 ## Test the Component
 
-<img src="./media/test-sensor.png" width="750">
-
 The easiest way to test if the component was successfuly started, navigate to the "Control" tab, expand the Sensor section and hit the "Get Readings" button. If it doesn't appear, go and check the "Logs" tab where you will likely find good indication about what went wrong.
 
+<img src="./media/test-sensor.png" width="750">
